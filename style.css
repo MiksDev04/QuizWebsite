@@ -1,0 +1,241 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    margin: 5%;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: 2%;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.582);
+    box-shadow: 3px 3px 7px;
+}
+
+.subjects {
+    box-sizing: border-box;
+    flex: 2 1 200px;
+    display: grid;
+    border-radius: 5px;
+    padding: 5%;
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.questions {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 5 1 350px;
+    display: none;
+    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5%;
+    gap: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.subjects a {
+    border-bottom: 1px solid rgb(179, 179, 179);
+    align-content: center;
+    box-sizing: border-box;
+    padding: 2px;
+    text-decoration: none;
+    transition: 0.3s;
+    position: static;
+}
+
+.selected-subject {
+    background-color: rgb(51, 51, 255);
+    color: white;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    aspect-ratio: 1;
+    top: 0;
+    right: 0;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(51, 51, 255);
+    transition: 0.3s;
+}
+
+#menu-button {
+    padding: 5px;
+    display: none;
+    width: 15px;
+    aspect-ratio: 1;
+    color: white;
+}
+
+#menu:active {
+    transform: scale(0.8);
+}
+
+ul {
+    margin-left: 5%;
+    width: 70%;
+    max-width: 500px;
+    display: grid;
+    gap: 10px;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+ul li {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.correct-user-answer {
+    background-color: green;
+    color: white;
+}
+
+.wrong-user-answer {
+    background-color: red;
+    color: white;
+}
+
+.questions button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(51, 51, 255);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px black black;
+}
+
+.questions button:active {
+    transform: scale(0.7);
+}
+
+.questions p {
+    bottom: 30px;
+    color: rgba(0, 0, 0, 0.548);
+    font-size: 0.9em;
+}
+
+/* starting section */
+.quiz-start {
+    height: 415px;
+    box-sizing: border-box;
+    flex: 5 1 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5%;
+    position: relative;
+    transition: 0.3s;
+}
+.quiz-start h3{
+    font-size: 2rem;
+}
+
+#subject-for-quiz {
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(51, 51, 255);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+    box-shadow: 1px 1px 3px black black;
+}
+
+#subject-for-quiz:hover {
+    transform: scale(1.1);
+}
+
+/* close button */
+.close-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: rgb(51, 51, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.close{
+    padding: 3px;
+}
+.close-container:active{
+    transform: scale(0.7);
+}
+
+@media(max-width: 648px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .subjects {
+        height: 45px;
+        flex-basis: auto;
+    }
+
+    .subjects a {
+        position: absolute;
+        display: none;
+    }
+
+    .questions{
+        padding: 10% 5%;
+    }
+
+    .questions button {
+        font-size: 1.1rem;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menu-button {
+        display: block;
+    }
+}
