@@ -149,7 +149,7 @@ function randomQuestion() {
         questionChoices[1].textContent = "b. " + questions[random].b;
         questionChoices[2].textContent = "c. " + questions[random].c;
         questionChoices[3].textContent = "d. " + questions[random].d;
-        questionP.textContent = `${questionNo}. ` + `out of 10 question`;
+        questionP.textContent = `${questionNo} ` + `out of 10 questions`;
         questionChoices.forEach((choices) => {
             choices.classList.remove("correct-user-answer", "wrong-user-answer");
             choices.addEventListener("click", answeringProcess);
