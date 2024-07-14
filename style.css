@@ -16,6 +16,10 @@ body {
     background-attachment: fixed;
 }
 
+svg{
+    width: 10px;
+}
+
 .container {
     box-sizing: border-box;
     padding: 2%;
@@ -73,7 +77,6 @@ body {
 }
 
 #menu {
-    display: none;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -128,7 +131,7 @@ ul li {
     color: white;
 }
 
-.questions button {
+#next {
     padding: 5px 10px;
     border: none;
     background-color: rgb(51, 51, 255);
@@ -142,7 +145,7 @@ ul li {
     box-shadow: 1px 1px 3px black black;
 }
 
-.questions button:active {
+#next:active {
     transform: scale(0.7);
 }
 
@@ -187,19 +190,25 @@ ul li {
 }
 
 /* close button */
-.close-container{
+.close-container {
     position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-    background-color: rgb(51, 51, 255);
+    z-index: 1;
     display: flex;
+    top: 0;
+    right: 0;
+    border: none;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(51, 51, 255);
     transition: 0.3s;
 }
-.close{
-    padding: 3px;
+
+.close {
+    padding: 5px;
+    width: 15px;
+    aspect-ratio: 1;
+    color: white;
 }
 .close-container:active{
     transform: scale(0.7);
@@ -224,7 +233,7 @@ ul li {
         padding: 10% 5%;
     }
 
-    .questions button {
+    #next {
         font-size: 1.1rem;
         position: absolute;
         bottom: 20px;
