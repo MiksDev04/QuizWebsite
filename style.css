@@ -16,10 +16,6 @@ body {
     background-attachment: fixed;
 }
 
-svg{
-    width: 10px;
-}
-
 .container {
     box-sizing: border-box;
     padding: 2%;
@@ -195,6 +191,7 @@ ul li {
     z-index: 1;
     display: flex;
     top: 0;
+    aspect-ratio: 1;
     right: 0;
     border: none;
     align-items: center;
