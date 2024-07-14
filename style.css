@@ -16,6 +16,7 @@ body {
     background-attachment: fixed;
 }
 
+
 .container {
     box-sizing: border-box;
     padding: 2%;
@@ -204,7 +205,6 @@ ul li {
 .close {
     padding: 5px;
     width: 15px;
-    aspect-ratio: 1;
     color: white;
 }
 .close-container:active{
