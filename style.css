@@ -15,7 +15,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+ svg{
+    width: 15px;    
+    aspect-ratio: 1;
+ }
 
 .container {
     box-sizing: border-box;
@@ -91,8 +94,6 @@ body {
 #menu-button {
     padding: 5px;
     display: none;
-    width: 15px;
-    aspect-ratio: 1;
     color: white;
 }
 
@@ -204,7 +205,6 @@ ul li {
 
 .close {
     padding: 5px;
-    width: 15px;
     color: white;
 }
 .close-container:active{
